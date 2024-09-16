@@ -2,7 +2,6 @@ import React from 'react'
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
   variant?: 'primary' | 'secondary';
-  text: string;
 }
 
 const Button = ({variant, ...props} : ButtonProps) => {
