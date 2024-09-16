@@ -1,12 +1,14 @@
 import React from 'react'
-type Props = {
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
+  variant?: 'primary' | 'secondary';
   text: string;
 }
 
-const Button: React.FC<Props> = ({text}) => {
-  
+const Button = ({variant, ...props} : ButtonProps) => {
+  const ColorClass = variant == 'primary' ? 'blue' : 'red';
     return (
-      <div>{text}</div>
+      <button style={{color: ColorClass}} {...props}>{props.children}</button>
     )
   
 }
