@@ -1,9 +1,12 @@
 import React from 'react'
+type Props = {
+  text: string;
+}
 
-const Button = () => {
+const Button: React.FC<Props> = ({text}) => {
   
     return (
-      <div>Button</div>
+      <div>{text}</div>
     )
   
 }
